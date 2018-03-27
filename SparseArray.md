@@ -17,7 +17,7 @@ SparseArray 是整数到对象的映射，不是普通的对象数组，索引�
 
 - index 是 SpareArray 的特有属性，SpareArray 内部使用两个数组存储 Keys 和 Values。
 
-- ``` int[] mKeys
+- ``` java
   private int[] mKeys;
   private Object[] mValues;
   ```
@@ -32,7 +32,7 @@ SparseArray 是整数到对象的映射，不是普通的对象数组，索引�
 
 #### put 方法
 
-```
+```java
 public void put(int key, E value) {
 	int i = ContainerHelpers.binarySearch(mKeys, mSize, key);
 
@@ -92,7 +92,7 @@ public void delete(int key) {
 
 #### gc 方法
 
-```
+```java
 private void gc() {
 	int n = mSize;
 	int o = 0;
